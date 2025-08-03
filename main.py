@@ -27,13 +27,6 @@ tools = klavis_client.mcp_server.list_tools(
     format=ToolFormat.OPENAI,
 )
 
-# Get available tools in OpenAI format
-tools = klavis_client.mcp_server.list_tools(
-    server_url=google_calendar_server.server_url,
-    format=ToolFormat.OPENAI,
-)
-
-
 # Initial conversation
 today = datetime.now().strftime("%Y-%m-%d")
 wednesday = (datetime.now() + timedelta(days=2)).strftime("%Y-%m-%d")
@@ -42,6 +35,7 @@ messages = [{
     "role": "system",
     "content": "You are a helpful assistant that can help with Google Calendar events. You can create, update, and delete events. You can also get the events for a given day."
 }]
+
 while True:
     user_input = input("Enter a command: ")
     if user_input == "exit":

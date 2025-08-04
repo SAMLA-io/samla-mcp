@@ -51,8 +51,7 @@ uv sync
 
 3. Set up your environment:
 ```bash
-cp .env.example .env
-# Edit .env and add your KLAVIS_API_KEY
+KLAVIS_API_KEY=your_klavis_api_key
 ```
 
 ### Running the Server

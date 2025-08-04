@@ -1,6 +1,12 @@
-def main():
-    print("Hello from samla-mcp!")
+from samla_mcp.server import mcp
 
+"""
+The server object that fastmcp expects.
+It is automatically ran when the server is started.
+"""
 
-if __name__ == "__main__":
-    main()
+server = mcp
+
+""" 
+Additional code
+"""
